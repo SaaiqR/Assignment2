@@ -1,290 +1,395 @@
 <html>
+
 <head>
     <title>Triple Number Tracker</title>
     <style>
-       body {
-        align-content: center;
-        background-color: #680000;
-        color: white;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        display:grid;
+        body {
+            align-content: center;
+            background-color: #680000;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: grid;
 
-        text-align: center;
-         font-size: 60px;
+            text-align: center;
+            font-size: 60px;
 
-         grid-template-columns: 1fr 1fr 1fr;
-         grid-template-rows: 100px 100px 1fr 1fr 1fr 1fr 100px;
-         gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 1fr 1fr 1fr 1fr 100px;
+            gap: 10px;
 
-         height: 99vh;
-         width: 99vw;
+            height: 99vh;
+            width: 99vw;
 
-       }
+        }
+
         div {
-         align-content: center;
-         border: 3px solid black;
-         vertical-align:middle;
-         }
+            align-content: center;
+            border: 3px solid black;
+            vertical-align: middle;
+        }
 
-         button {
-           width: 95%;
-           height: 95%;
+        button {
+            width: 95%;
+            height: 95%;
 
-    
-         }
 
-         .displayButton {
+        }
+
+        .displayButton {
             background-color: #888888;
 
-         }
+        }
 
-       .title {
-          grid-row-start: 1;
-          grid-row-end: 2;
-          grid-column-start: 1;
-          grid-column-end: 4;
-          background: #dd0000;
-           border: #ffffff solid 4px; 
-                   
+        .title {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background: #dd0000;
+            border: #ffffff solid 4px;
+
             font-size: 50px;
-          }
+        }
 
         .informationDisplay {
             grid-row-start: 2;
-          grid-row-end: 3;
-          grid-column-start: 1;
-          grid-column-end: 4;
-          background: #000000;
-           border:#dd0000 solid 4px; 
-           vertical-align: center;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background: #000000;
+            border: #dd0000 solid 4px;
+            vertical-align: center;
             font-size: 25px;
         }
 
-      .button1 {
-          grid-row-start: 3;
-          grid-row-end: 4;
-          grid-column-start: 1;
-          grid-column-end: 2;
-          }
+        .button1 {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
 
-      .button2 {
-          grid-row-start: 4;
-          grid-row-end: 5;
-          grid-column-start: 1;
-          grid-column-end: 2;
-          }
-
-
-          .button3 {
-          grid-row-start: 5;
-          grid-row-end: 6;
-          grid-column-start: 1;
-          grid-column-end: 2;
-          }
-
-          .button4 {
-          grid-row-start: 6;
-          grid-row-end: 7;
-          grid-column-start: 1;
-          grid-column-end: 2;
-          }
-          
-         .button5 {
-          grid-row-start: 3;
-          grid-row-end: 4;
-          grid-column-start: 2;
-          grid-column-end: 3;
-          }
-
-          .button6 {
-          grid-row-start: 4;
-          grid-row-end: 5;
-          grid-column-start: 2;
-          grid-column-end: 3;
-          }
-
-          .button7 {
-          grid-row-start: 5;
-          grid-row-end: 6;
-          grid-column-start: 2;
-          grid-column-end: 3;
-          }
-
-          .button8 {
-          grid-row-start: 6;
-          grid-row-end: 7;
-          grid-column-start: 2;
-          grid-column-end: 3;
-          }
-          
-          .button9 {
-          grid-row-start: 3;
-          grid-row-end: 4;
-          grid-column-start: 3;
-          grid-column-end: 4;
-          }
-
-          
-          .button10 {
-          grid-row-start: 4;
-          grid-row-end: 5;
-          grid-column-start: 3;
-          grid-column-end: 4;
-          }
-
-          
-          .button11 {
-          grid-row-start: 5;
-          grid-row-end: 6;
-          grid-column-start: 3;
-          grid-column-end: 4;
-          }
-      
-          .button12 {
-          grid-row-start: 6;
-          grid-row-end: 7;
-          grid-column-start: 3;
-          grid-column-end: 4;
-          }
-      
-      
-          .footer {
-          grid-row-start: 7;
-          grid-row-end: 8;
-          grid-column-start: 1;
-          grid-column-end: 4;
-          background: #dd0000;
-          }
+        .button2 {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
 
 
-   
+        .button3 {
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .button4 {
+            grid-row-start: 6;
+            grid-row-end: 7;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .button5 {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .button6 {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .button7 {
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .button8 {
+            grid-row-start: 6;
+            grid-row-end: 7;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .button9 {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
 
 
-   
-   h1 {
-    font-size: 50px;
+        .button10 {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
 
-   }
 
+        .button11 {
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+
+        .button12 {
+            grid-row-start: 6;
+            grid-row-end: 7;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+
+
+        .footer {
+            grid-row-start: 7;
+            grid-row-end: 8;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background: #dd0000;
+        }
+
+
+
+
+
+
+        h1 {
+            font-size: 50px;
+
+        }
     </style>
 
     <script>
+        var a = 0;
+        var b = 0;
+        var c = 0;
 
-        
+        function addOne() {
+            a = a + 1;
+            document.getElementById("userCom").innerHTML = "1 has been added to A!"
+            { document.getElementById("halfButton").disabled = false; }
+            { document.getElementById("doubleButton").disabled = false; }
+        }
+        function addOneB() {
+            b = b + 1;
+            document.getElementById("userCom").innerHTML = "1 has been added to B!"
+            { document.getElementById("halfButton").disabled = false; }
+            { document.getElementById("doubleButton").disabled = false; }
+        }
+
+        function showA() {
+
+            document.getElementById("userCom").innerHTML = a;
+        }
+        function showB() {
+
+            document.getElementById("userCom").innerHTML = b;
+        }
+        function addOneC() {
+            c = c + 1;
+            document.getElementById("userCom").innerHTML = "1 has been added to C!"
+            { document.getElementById("halfButton").disabled = false; }
+            { document.getElementById("doubleButton").disabled = false; }
+        }
+        function showC() {
+
+            document.getElementById("userCom").innerHTML = c;
+        }
+        function addTenA() {
+            a = a + 10;document.getElementById("userCom").innerHTML = "10 has been added to A!"
+            { document.getElementById("halfButton").disabled = false; }
+            { document.getElementById("doubleButton").disabled = false; }
+        }
+
+
+        function addOneAll() {
+            a = a + 1;
+            b = b + 1;
+            c = c + 1;
+            document.getElementById("userCom").innerHTML = "1 has been added to A,B, and C!"
+            { document.getElementById("halfButton").disabled = false; }
+            { document.getElementById("doubleButton").disabled = false; }
+        }
+        function HalveAll() {
+            a = a / 2;
+            b = b / 2;
+            c = c / 2;
+            document.getElementById("userCom").innerHTML = "All values have been halved 😔"
+            a = Math.round(a);
+            b = Math.round(b);
+            c = Math.round(c);
+
+
+            
+        }
+
+        function incrementCBySetAmount() {
+            c = c + Number(document.getElementById("numberToAdd").value);
+            document.getElementById("userCom").innerHTML = "C has been increased by " + Number(document.getElementById("numberToAdd").value);
+            { document.getElementById("halfButton").disabled = false; }
+            { document.getElementById("doubleButton").disabled = false; }
+        }
+
+        function resetAllValues() {
+            a = 0;
+            b = 0;
+            c = 0;
+            document.getElementById("userCom").innerHTML = "All values have been Reset! 💀"
+
+            if (a == 0 && b == 0 && c == 0) { document.getElementById("halfButton").disabled = true; }
+            { document.getElementById("doubleButton").disabled = true; }
+            
+            //if (a == 100 && b == 100 && c == 100) 
+            
+
+        }
+        function doubleAll() {
+            a = a * 2;
+            b = b * 2;
+            c = c * 2;
+            document.getElementById("userCom").innerHTML = "All values have been Doubled! 😮"
+        }
+
     </script>
 </head>
 
 <body>
     <div class="title">
-         TRIPLE NUMBER TRACKER
+        TRIPLE NUMBER TRACKER
 
-       
+
     </div>
 
 
 
-    <div class="informationDisplay">
+    <div id="userCom" class="informationDisplay">
         Use the buttons below to activate the tracker!
 
-      
-   </div>
 
-
-
-    <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-       <button class="displayButton">
-
-
-       </button> 
     </div>
 
-    <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
 
 
-        </button>
-    </div>
-
-    <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
+    <div class="button1" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button class="displayButton" onclick="showA();">
+            Click to see the value of A
 
         </button>
 
 
     </div>
 
-    <div class="button4" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
-
-        </button>
-
-    </div>
-   
-    
-    <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button class="displayButton">
-
+    <div class="button2" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button onclick="addOne();">
+            Click to add one to A
 
         </button>
-
     </div>
-    <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
 
+    <div class="button3" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button onclick="addTenA();">
 
+            Click to add ten to A
         </button>
 
-    </div>
-    <div class="button7" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
-
-        </button>
 
     </div>
-    <div class="button8" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
 
-
-        </button>
-
-    </div>
-    <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button  class="displayButton">
-
+    <div class="button4" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button onclick="resetAllValues()">
+            Click to reset all values
 
         </button>
 
     </div>
 
-    <div class="button10" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
 
+    <div class="button5" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button class="displayButton" onclick="showB();">
+
+            Click to see the value of B
+        </button>
+
+    </div>
+    <div class="button6" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button onclick="addOneB();">
+            Click to add one to B
 
         </button>
 
     </div>
-    <div class="button11" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
-
-        </button>
-
-    </div>
-    <div class="button12" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
-
+    <div class="button7" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button onclick="addOneAll();">
+            Click to add one to all values
 
         </button>
 
     </div>
+    <div class="button8" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button id="doubleButton" onclick="doubleAll()">
+            Click to double all values
 
-    <div class="footer">
-        
+        </button>
+
     </div>
-    
+    <div class="button9" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button class="displayButton" onclick="showC();">
+            Click to see the value of C
+
+        </button>
+
+    </div>
+
+    <div class="button10" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button onclick="addOneC();">
+
+            Click to add one to C
+        </button>
+
+    </div>
+    <div class="button11" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button id="halfButton" onclick="HalveAll();">
+            Click to half all values
+
+        </button>
+
+    </div>
+    <div class="button12" onmouseenter="this.style='border: 3px solid #0088aa;';"
+        onmouseleave="this.style='border: 3px solid #000000;';">
+        <button onclick="incrementCBySetAmount()">
+            Click to increment c by set amount
+        </button>
+
+    </div>
+
+    <div class="footer" font-size:10px;>
+        <input id="numberToAdd">
+        What is the value you want to add to C?
+
+        </input>
+    </div>
+
 </body>
 
 
